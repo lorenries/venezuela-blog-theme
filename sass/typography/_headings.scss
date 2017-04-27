@@ -1,0 +1,8 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-family: $font__heading;
+}
+
+h1 { @include font-size($f1); }
+h2 { @include font-size($f2); }
+h3 { @include font-size($f3); }

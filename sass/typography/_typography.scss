@@ -1,0 +1,33 @@
+@font-face {
+	font-family: "HouschkaExtraBold";
+	src: url("assets/fonts/houschkaaltpro-extrabold-web.woff") format("woff");
+}
+
+@font-face {
+	font-family: "HouschkaBold";
+	src: url("assets/fonts/houschkaaltpro-bold-web.woff") format("woff");
+}
+
+@font-face {
+	font-family: "HouschkaMedium";
+	src: url("assets/fonts/houschkaaltpro-medium-web.woff") format("woff");
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size($f4);
+	line-height: $font__line-height-body;
+
+	@media $breakpoint-not-small {
+		@include font-size($f1);
+	}
+}
+
+@import "headings";
+
+@import "copy";
