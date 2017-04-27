@@ -1,0 +1,31 @@
+{
+  "name": "venezuela-blog-theme",
+  "version": "1.0.0",
+  "description": "A Wordpress theme for WOLA's Venezuelan Politics and Human Rights blog",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorenries/venezuela-blog-theme.git"
+  },
+  "author": "Loren Riesenfeld",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lorenries/venezuela-blog-theme/issues"
+  },
+  "homepage": "https://github.com/lorenries/venezuela-blog-theme#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.2",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-image": "^2.7.2",
+    "gulp-jshint": "^2.0.2",
+    "gulp-newer": "^1.3.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "jshint": "^2.9.4"
+  }
+}
