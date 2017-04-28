@@ -7,3 +7,23 @@
 ## Menus
 --------------------------------------------------------------*/
 @import "menus";
+
+$wola-gray: #404041;
+$wola-blue: #00B5EF;
+
+
+.bg-wola-gray {
+	background-color: $wola-gray;
+}
+
+.bg-wola-blue {
+	background-color: $wola-blue;
+}
+
+.wola-blue {
+	color: $wola-blue;
+}
+
+.wola-gray {
+	color: $wola-gray;
+}

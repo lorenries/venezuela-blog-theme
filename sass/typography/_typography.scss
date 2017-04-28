@@ -22,10 +22,6 @@ textarea {
 	font-family: $font__main;
 	@include font-size($f4);
 	line-height: $font__line-height-body;
-
-	@media $breakpoint-not-small {
-		@include font-size($f1);
-	}
 }
 
 @import "headings";
