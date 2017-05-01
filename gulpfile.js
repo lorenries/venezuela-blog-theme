@@ -30,20 +30,20 @@ gulp.task('css', function() {
   .pipe(postcss([
     autoprefixer('last 2 versions', '> 1%')
   ]))
-  .pipe(uncss({
-    html: ['http://hhvm.hgv.test/', 'http://hhvm.hgv.test/?p=609']
-  }))  
+  // .pipe(uncss({
+  //   html: ['http://hhvm.hgv.test/', 'http://hhvm.hgv.test/?p=609']
+  // }))  
   .pipe(sourcemaps.write(scss + 'maps'))
   .pipe(gulp.dest(root));
 });
 
-// gulp.task('uncss', function() {
-//   return gulp.src(root + 'style.css')
-//       .pipe(uncss({
-//           html: ['http://hhvm.hgv.dev']
-//       }))
-//       .pipe(gulp.dest(root));
-// });
+gulp.task('uncss', function() {
+  return gulp.src(root + 'style.css')
+      .pipe(uncss({
+          html: ['http://hhvm.hgv.test/', 'http://hhvm.hgv.test/?p=609']
+      }))
+      .pipe(gulp.dest(root));
+});
 
 // Optimize images through gulp-image
 gulp.task('images', function() {

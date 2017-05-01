@@ -18,3 +18,33 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+.wola-blue { color: #D5D0CA; }
+.bg-wola-blue { background-color: #D5D0CA; }
+.b--wola-blue { border-color: #D5D0CA; }
+
+.hover-wola-blue:hover,
+.hover-wola-blue:focus { color: #D5D0CA; }
+
+.hover-bg-wola-blue:hover,
+.hover-bg-wola-blue:focus { background-color: #D5D0CA; }
+
+.wola-gray { color: #404041; }
+.bg-wola-gray { background-color: #404041; }
+.b--wola-gray { border-color: #404041; }
+
+.hover-wola-gray:hover,
+.hover-wola-gray:focus { color: #404041; }
+
+.hover-bg-wola-gray:hover,
+.hover-bg-wola-gray:focus { background-color: #404041; }
+
+.wola-light-gray { color: #D5D0CA; }
+.bg-wola-light-gray { background-color: #D5D0CA; }
+.b--wola-light-gray { border-color: #D5D0CA; }
+
+.hover-wola-light-gray:hover,
+.hover-wola-light-gray:focus { color: #D5D0CA; }
+
+.hover-bg-wola-light-gray:hover,
+.hover-bg-wola-light-gray:focus { background-color: #D5D0CA; }

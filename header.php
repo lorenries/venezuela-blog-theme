@@ -21,36 +21,49 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'venezuela-blog' ); ?></a>
+	<a class="skip-link screen-reader-text dn" href="#content"><?php esc_html_e( 'Skip to content', 'venezuela-blog' ); ?></a>
 
-	<header id="masthead" class="site-header bg-wola-gray" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title white"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="link white"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title white"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="white"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	<header id="masthead" class="site-header w-100" role="banner">
+		
+		<div class="w-100 bg-wola-gray pa0 ma0">		
+			<div class="mw9 center pa0 ma0">
+				<div class="site-branding flex flex-column flex-row-ns justify-around pa0 ma0">
+						<div class="flex items-center">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="home">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/logo2.png" alt="WOLA Logo" class="ph2" style="max-height: 6rem; width: auto;">
+							</a>
+						</div>
+						<div class="ph3 mv3 br b--white"></div>
+						<div class="flex items-center pl4">
+							<h1 class="site-title white ttu f4 f3-ns f2-l lh-title ph2" style="max-width: 30rem">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="link white medium">Venezuelan <span class="extrabold">Politics</span> and <span class="extrabold">Human Rights</span></a>
+							</h1>
+						</div>
+						<div class="flex items-center">
+							<p class="site-description white measure-narrow ph2 ttu f6 f5-l i"><span class="bold">Independent, Reality-Based Analysis</span></br><span class="medium">Curated by David Smilde</span></p>
+						</div>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+				</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'venezuela-blog' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+				<nav id="site-navigation" class="main-navigation pa0 ma0" role="navigation">
+					<button class="menu-toggle dn" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'venezuela-blog' ); ?></button>
+					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+				</nav><!-- #site-navigation -->
+				
+			</div>
+		</div>	
+
+	<!-- header image -->
+
+	<?php if ( get_header_image() && is_front_page() ) : ?>
+		<div class="w-100 h-auto pa0 ma0">
+			<img src="<?php header_image(); ?>" class="w-100 h-25"></img>
+		</div>
+	<?php endif; ?>
+
+	<!-- end header image -->			
 		
 	</header><!-- #masthead -->
 
-	<!-- header image -->
-	<div class="w-100 h-auto">
-	<img src="<?php header_image(); ?>" class="w-100 h-25"></img>
-	</div>
-	<!-- end header image -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content pa2">
