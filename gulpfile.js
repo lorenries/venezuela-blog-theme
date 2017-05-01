@@ -7,6 +7,7 @@ var gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
+  uncss  = require('gulp-uncss'),
 
   // Only work with new or updated files
   newer = require('gulp-newer'),
@@ -24,16 +25,25 @@ gulp.task('css', function() {
   return gulp.src(scss + '{style.scss,rtl.scss}')
   .pipe(sourcemaps.init())
   .pipe(sass({
-    outputStyle: 'expanded', 
-    indentType: 'tab',
-    indentWidth: '1'
+    outputStyle: 'compressed'
   }).on('error', sass.logError))
   .pipe(postcss([
     autoprefixer('last 2 versions', '> 1%')
   ]))
+  .pipe(uncss({
+    html: ['http://hhvm.hgv.test/', 'http://hhvm.hgv.test/?p=609']
+  }))  
   .pipe(sourcemaps.write(scss + 'maps'))
   .pipe(gulp.dest(root));
 });
+
+// gulp.task('uncss', function() {
+//   return gulp.src(root + 'style.css')
+//       .pipe(uncss({
+//           html: ['http://hhvm.hgv.dev']
+//       }))
+//       .pipe(gulp.dest(root));
+// });
 
 // Optimize images through gulp-image
 gulp.task('images', function() {

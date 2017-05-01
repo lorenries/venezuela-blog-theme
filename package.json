@@ -26,6 +26,6 @@
     "gulp-postcss": "^6.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.2.0",
+    "gulp-uncss": "^1.0.6",
     "jshint": "^2.9.4"
-  }
 }
