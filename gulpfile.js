@@ -30,9 +30,6 @@ gulp.task('css', function() {
   .pipe(postcss([
     autoprefixer('last 2 versions', '> 1%')
   ]))
-  // .pipe(uncss({
-  //   html: ['http://hhvm.hgv.test/', 'http://hhvm.hgv.test/?p=609']
-  // }))  
   .pipe(sourcemaps.write(scss + 'maps'))
   .pipe(gulp.dest(root));
 });
@@ -61,6 +58,23 @@ gulp.task('javascript', function() {
   .pipe(gulp.dest(js));
 });
 
+gulp.task('sync', function() {
+    //watch files
+    var files = [
+    './style.css',
+    './*.php'
+    ];
+ 
+    //initialize browsersync
+    browserSync.init(files, {
+    //browsersync with a php server
+    open: 'external',
+    proxy: 'http://hhvm.hgv.test',
+    port: 8080,
+    notify: false
+    });
+});
+ 
 
 // Watch everything
 gulp.task('watch', function() {

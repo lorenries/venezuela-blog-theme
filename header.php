@@ -26,8 +26,8 @@
 	<header id="masthead" class="site-header w-100" role="banner">
 		
 		<div class="w-100 bg-wola-gray pa0 ma0">		
-			<div class="mw9 center pa0 ma0">
-				<div class="site-branding flex flex-column flex-row-ns justify-around pa0 ma0">
+			<div class="mw8-5 center pa0 ma0">
+				<div class="site-branding flex flex-column flex-row-ns justify-around pa2 ma0">
 						<div class="flex items-center">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="home">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/logo2.png" alt="WOLA Logo" class="ph2" style="max-height: 6rem; width: auto;">
@@ -47,7 +47,7 @@
 
 				<nav id="site-navigation" class="main-navigation pa0 ma0" role="navigation">
 					<button class="menu-toggle dn" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'venezuela-blog' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'menu_class' => 'link white flex ph3 ma0 list', 'container_class' => 'list pa3 nested-list-reset',  ) ); ?>
 				</nav><!-- #site-navigation -->
 				
 			</div>
@@ -56,8 +56,8 @@
 	<!-- header image -->
 
 	<?php if ( get_header_image() && is_front_page() ) : ?>
-		<div class="w-100 h-auto pa0 ma0">
-			<img src="<?php header_image(); ?>" class="w-100 h-25"></img>
+		<div class="w-100 vh-25 cover pa0 ma0" style="background-image: url('<?php header_image(); ?>');">
+			<!-- <img src="<?php header_image(); ?>" class="w-100 h-25"></img> -->
 		</div>
 	<?php endif; ?>
 
