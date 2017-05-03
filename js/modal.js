@@ -8,11 +8,7 @@
     link.addEventListener("click", toggleModal);
     close.addEventListener("click", toggleModal);
 
-    
-    // if (overlay.classList.contains("open")) {
-    // }
-
-function keypress(event) {
+function escapePressed(event) {
     console.log(event.key);
     if (event.key == 'Escape') {
         overlay.classList.remove("open");
@@ -28,7 +24,7 @@ function keypress(event) {
         } else {
             overlay.classList.add("open");
             body.classList.add("overflow-hidden");
-            document.addEventListener("keyup", keypress);
+            document.addEventListener("keyup", escapePressed);
         }
     }
   });
