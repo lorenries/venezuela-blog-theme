@@ -8,6 +8,8 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
   uncss  = require('gulp-uncss'),
+  uglify = require('gulp-uglify'),
+  beautify = require('gulp-beautify'),
 
   // Only work with new or updated files
   newer = require('gulp-newer'),
@@ -58,37 +60,33 @@ gulp.task('javascript', function() {
   .pipe(gulp.dest(js));
 });
 
-gulp.task('sync', function() {
-    //watch files
-    var files = [
-    './style.css',
-    './*.php'
-    ];
- 
-    //initialize browsersync
-    browserSync.init(files, {
-    //browsersync with a php server
-    open: 'external',
-    proxy: 'http://hhvm.hgv.test',
-    port: 8080,
-    notify: false
+gulp.task('pretty-js', function() {
+  return gulp.src([js + '*.js'])
+  .pipe(beautify({indent_size: 2}))
+  .pipe(gulp.dest(js));
+});
+
+gulp.task('ugly-js', function() {
+  return gulp.src([js + '*.js'])
+  .pipe(uglify())
+  .pipe(gulp.dest(js));
+});
+
+
+
+// Watch and hot reload PHP, CSS/SASS, and JS
+gulp.task('serve', ['css'], function() {
+
+    browserSync.init({
+      open: 'external',
+      proxy: 'http://hhvm.hgv.test',
+      port: 8080
     });
-});
- 
 
-// Watch everything
-gulp.task('watch', function() {
-  browserSync.init({ 
-    open: 'external',
-    proxy: 'http://hhvm.hgv.test',
-    port: 8080
-  });
-  gulp.watch([root + '**/*.css', root + '**/*.scss' ], ['css']);
-  gulp.watch(js + '**/*.js', ['javascript']);
-  gulp.watch(img + 'RAW/**/*.{jpg,JPG,png}', ['images']);
-  gulp.watch(root + '**/*').on('change', browserSync.reload);
+    gulp.watch(js + '**/*.js', ['javascript']);
+    gulp.watch(root + '**/*.scss', ['css']);
+    gulp.watch(['./*.php', root + 'style.css', js + '*.js']).on('change', browserSync.reload);
 });
-
 
 // Default task (runs at initiation: gulp --verbose)
-gulp.task('default', ['watch']);
+gulp.task('default', ['serve']);
