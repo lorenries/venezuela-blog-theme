@@ -13,7 +13,7 @@ function escapePressed(event) {
     if (event.key == 'Escape') {
         overlay.classList.remove("open");
         body.classList.remove("overflow-hidden");
-        document.removeEventListener("keyup", keypress);
+        document.removeEventListener("keyup", escapePressed);
     }
 }     
 
@@ -21,6 +21,7 @@ function escapePressed(event) {
         if (overlay.classList.contains("open")) {
             overlay.classList.remove("open");
             body.classList.remove("overflow-hidden");
+            document.removeEventListener("keyup", escapePressed);
         } else {
             overlay.classList.add("open");
             body.classList.add("overflow-hidden");

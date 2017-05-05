@@ -96,9 +96,9 @@
 		
 	</header><!-- #masthead -->
 
-	<aside id="aboutModal" class="overlay flex justify-center pa3 pa4-ns">
+	<aside id="aboutModal" class="overlay center pa3 pa4-ns">
 		<a href="#" class="closebtn">&times;</a>
-		<div class="center">
+		<div class="center pt5 pt6-ns">
 			<h1 class="wola-gray f2 ttu">About the Blog</h1>
 			<p class="measure wola-gray f3 tl">
 				Venezuelan Politics and Human Rights, a blog hosted by the Washington Office on Latin America (WOLA), is a unique resource for journalists, policymakers, scholars, activists and others interested in understanding Venezuelan politics and human rights. 
