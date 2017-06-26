@@ -23,15 +23,15 @@ $color__wola-blue: #D5D0CA;
 $color__wola-gray: #404041;
 $color__wola-light-gray: #D5D0CA;
 
-.wola-blue { color: #D5D0CA; }
-.bg-wola-blue { background-color: #D5D0CA; }
-.b--wola-blue { border-color: #D5D0CA; }
+.wola-blue { color: #00B5EF; }
+.bg-wola-blue { background-color: #00B5EF; }
+.b--wola-blue { border-color: #00B5EF; }
 
 .hover-wola-blue:hover,
-.hover-wola-blue:focus { color: #D5D0CA; }
+.hover-wola-blue:focus { color: #00B5EF; }
 
 .hover-bg-wola-blue:hover,
-.hover-bg-wola-blue:focus { background-color: #D5D0CA; }
+.hover-bg-wola-blue:focus { background-color: #00B5EF; }
 
 .wola-gray { color: #404041; }
 .bg-wola-gray { background-color: #404041; }
@@ -49,6 +49,3 @@ $color__wola-light-gray: #D5D0CA;
 
 .hover-wola-light-gray:hover,
 .hover-wola-light-gray:focus { color: #D5D0CA; }
-
-.hover-bg-wola-light-gray:hover,
-.hover-bg-wola-light-gray:focus { background-color: #D5D0CA; }

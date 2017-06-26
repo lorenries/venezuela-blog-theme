@@ -9,6 +9,12 @@
 
 ?>
 
+<?php if(is_home() && is_front_page()) : ?>
+
+	<?php get_template_part( 'template-parts/content-preview' ); ?>
+
+<?php else : ?>
+
 <article id="post-<?php the_ID(); ?>" class="center mw8">
 	<header class="entry-header">
 		<?php
@@ -45,3 +51,5 @@
 		<?php venezuela_blog_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+<?php endif; ?>

@@ -67,6 +67,11 @@ function venezuela_blog_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	// Add post support for excerpts
+	add_post_type_support( 'page', 'excerpt' );
+	add_post_type_support( 'post', 'excerpt' );
+
 }
 endif;
 add_action( 'after_setup_theme', 'venezuela_blog_setup' );
