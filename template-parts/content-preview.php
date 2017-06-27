@@ -35,7 +35,11 @@
 			<a href="<?php echo esc_url( get_permalink() ); ?>" class="link underline wola-blue">Read More...</a>
 		</div>
 		<div>
-			<div class="h-auto dib twitter" style="width:1.5rem;"><?php get_template_part( 'assets/icons/twitter.svg' ); ?></div>
+			<a title="Share this on Twitter" href="https://twitter.com/intent/tweet?url=<?php echo esc_url( get_permalink() ); ?>&text=<?php echo esc_url( get_the_title() ) ?>" title="Tweet This">
+
+				<div class="h-auto dib twitter" style="width:1.5rem;"><?php get_template_part( 'assets/icons/twitter.svg' ); ?></div>
+			
+			</a>
 			<div class="h-auto dib facebook" style="width:1.5rem;"><?php get_template_part( 'assets/icons/facebook.svg' ); ?></div>	
 		</div>
 	</footer>
