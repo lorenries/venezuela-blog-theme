@@ -1,4 +1,5 @@
 <article id="post-<?php the_ID(); ?>" class="mw7 ba b1 b--black-20 br2 ph3 ma3 card-shadow">
+	
 	<header class="entry-header">
 		<?php
 
@@ -25,8 +26,18 @@
 
 	<?php endif; ?>
 
-	<div class="entry-content">
-		<p><?php echo wp_trim_words( get_the_content(), $num_words = 35, $more = "…" );?></p>
+	<div>
+		<p class="pa0 ma0"><?php echo wp_trim_words( get_the_content(), $num_words = 35, $more = "…" );?></p>
 	</div><!-- .entry-content -->
+
+	<footer class="flex justify-between pv2">	
+		<div class="f5 self-end">
+			<a href="<?php esc_url( get_permalink() ); ?>" class="link underline wola-blue">Read More...</a>
+		</div>
+		<div>
+			<div class="h-auto dib twitter" style="width:1.5rem;"><?php get_template_part( 'assets/icons/twitter.svg' ); ?></div>
+			<div class="h-auto dib facebook" style="width:1.5rem;"><?php get_template_part( 'assets/icons/facebook.svg' ); ?></div>	
+		</div>
+	</footer>
 
 </article>
