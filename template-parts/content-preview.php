@@ -9,7 +9,7 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 			
-		<?php the_title( '<h2 class="entry-title f3 bold"><a class="link wola-gray hover-wola-blue" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+		<?php the_title( '<h2 class="entry-title f3 bold lh-title"><a class="link wola-gray hover-wola-blue" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 
 	</header><!-- .entry-header -->
 
