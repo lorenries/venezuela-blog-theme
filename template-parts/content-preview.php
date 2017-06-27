@@ -19,7 +19,7 @@
 
 		<div class="">
 
-			<a href="<?php get_permalink($post->ID); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="" class="w-100 max-height-5 center object-fit-cover"></img></a>
+			<a href="<?php echo esc_url( get_permalink() ); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="" class="w-100 max-height-5 center object-fit-cover"></img></a>
 
 		</div>
 
@@ -32,7 +32,7 @@
 
 	<footer class="flex justify-between pv2">	
 		<div class="f5 self-end">
-			<a href="<?php esc_url( get_permalink() ); ?>" class="link underline wola-blue">Read More...</a>
+			<a href="<?php echo esc_url( get_permalink() ); ?>" class="link underline wola-blue">Read More...</a>
 		</div>
 		<div>
 			<div class="h-auto dib twitter" style="width:1.5rem;"><?php get_template_part( 'assets/icons/twitter.svg' ); ?></div>
