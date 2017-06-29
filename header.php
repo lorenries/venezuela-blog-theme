@@ -123,4 +123,4 @@
 
 	</aside>
 
-	<div id="content" class="site-content pa2">
+	<div id="content" class="site-content pa2 bg-fafafa">
