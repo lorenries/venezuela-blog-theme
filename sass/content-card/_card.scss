@@ -3,9 +3,22 @@
 }
 
 .max-height-5 {
-	max-height: 16rem;
+	max-height: 14rem;
 }
 
 .object-fit-cover {
 	object-fit: cover;
+}
+
+.avatar {
+	border-radius:100%;
+}
+
+.author {
+	color: $color__wola-blue;
+	text-decoration: none;
+}
+
+.author:hover {
+	text-decoration: underline;
 }

@@ -13,7 +13,8 @@ if ( ! function_exists( 'venezuela_blog_posted_on' ) ) :
  */
 function venezuela_blog_posted_on() {
     if ( function_exists( 'coauthors_posts_links' ) ) :
-        printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %4$s %3$s', 'venezuela_blog' ),
+    	$coauthors = get_coauthors();
+        printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s<div>%4$s</div>', 'venezuela_blog' ),
             'meta-prep meta-prep-author',
             sprintf( '<a href="%1$s" title="%2$s" rel="bookmark" class="link wola-blue"><span class="entry-date">%3$s</span></a>',
                 get_permalink(),
@@ -21,7 +22,7 @@ function venezuela_blog_posted_on() {
                 get_the_date('M. d')
             ),
             coauthors_posts_links( null, null, null, null, false ),
-            coauthors_get_avatar()
+			coauthors_get_avatar( $coauthor, 65 )
         );
     else:
         printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'venezuela_blog' ),

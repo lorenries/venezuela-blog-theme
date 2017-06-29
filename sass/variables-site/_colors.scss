@@ -19,7 +19,7 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
-$color__wola-blue: #D5D0CA;
+$color__wola-blue: #00B5EF;
 $color__wola-gray: #404041;
 $color__wola-light-gray: #D5D0CA;
 
@@ -69,3 +69,7 @@ $color__wola-light-gray: #D5D0CA;
 
 .hover-bg-twitter:hover,
 .hover-bg-twitter:focus { background-color: #1DA1F2; }
+
+.bg-fafafa {
+	background-color: #fafafa;
+}
