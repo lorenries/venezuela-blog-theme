@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" class="center mw8">
+<article id="post-<?php the_ID(); ?>" class="center mw7">
 	<header class="entry-header">
 		<?php
 
@@ -10,7 +10,6 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php venezuela_blog_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>

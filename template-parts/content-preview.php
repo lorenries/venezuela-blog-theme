@@ -4,7 +4,7 @@
 		<?php
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="f6 black-70 entry-meta">
+		<div class="f6 black-70 flex justify-between items-start pt3">
 
 			<?php if ( function_exists( 'get_coauthors' ) ) {
 
@@ -13,7 +13,7 @@
 					$archive_link = get_author_posts_url( $coauthors[0]->ID, $author->user_nicename );
 					$link_title = 'Posts by ' . $coauthors[0]->display_name;
 					?>
-					<div class="flex pt3">
+					<div class="flex">
 						<div>
 							<a href="<?php esc_url( $archive_link ); ?>" class="author-link" title="<?php echo esc_attr( $link_title ); ?>"><?php echo coauthors_get_avatar( $coauthors[0], 50 ); ?></a>
 						</div>
@@ -25,7 +25,7 @@
 					<?php	
 				} else {
 		      // More than 2 authors
-					printf( __( '<div class="pt3"><div>By %2$s, %1$s</div>', 'venezuela_blog' ),
+					printf( __( '<div class="">By %2$s, %1$s</div>', 'venezuela_blog' ),
 						sprintf( '<span class="entry-date">%1$s</span></a>',
 							get_the_date('M. d')
 						),
@@ -43,6 +43,7 @@
 				<?php
 			} ?>
 
+			<div class="self-start"><?php echo get_reading_time(); ?></div>
 
 		</div><!-- .entry-meta -->
 	<?php endif; ?>
@@ -78,10 +79,10 @@
 	<div>
 		<a title="Share this on Twitter" href="<?php $posturl = urlencode( get_permalink() ); $text = urlencode( get_the_title() ); $url = 'https://twitter.com/intent/tweet?url='.$posturl.'&text='.$text; echo esc_url($url); ?>" class="link" rel="external">
 
-			<div class="h-auto dib twitter" style="width:1.5rem;"><?php get_template_part( 'assets/icons/twitter.svg' ); ?></div>
+			<div class="h-auto dib twitter grow-large" style="width:1.5rem;"><?php get_template_part( 'assets/icons/twitter.svg' ); ?></div>
 			
 		</a>
-		<div class="h-auto dib facebook" style="width:1.5rem;"><?php get_template_part( 'assets/icons/facebook.svg' ); ?></div>	
+		<div class="h-auto dib facebook grow-large" style="width:1.5rem;"><?php get_template_part( 'assets/icons/facebook.svg' ); ?></div>	
 	</div>
 </footer>
 
