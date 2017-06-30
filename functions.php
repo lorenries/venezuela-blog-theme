@@ -152,3 +152,17 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Estimate reading time
+ */
+function get_reading_time() {
+	$mycontent = get_the_content();
+	$word = str_word_count(strip_tags($mycontent));
+	$m = floor($word / 200);
+	if ($m < 1) {
+		return '1 min read';
+	} else {
+		return $m.' min read';
+	}
+}
