@@ -19,9 +19,9 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 				
-				<div class="flex flex-column flex-row-l justify-between-l justify-center">
+				<div class="flex flex-column flex-row-l justify-center">
 
-					<div class="" style="flex-basis: 70%">
+					<div class="center self-center">
 
 						<?php /* Start the Loop */ ?>
 						<?php while ( have_posts() ) : the_post(); ?>
@@ -45,7 +45,7 @@ get_header(); ?>
 					<?php endif; ?>
 
 					</div>
-				<div style="flex-basis: 30%"><?php get_sidebar(); ?></div>
+				<div style="flex-basis: 25%;" class="center"><?php get_sidebar(); ?></div>
 			</div>
 
 		</main><!-- #main -->
