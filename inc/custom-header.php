@@ -20,8 +20,8 @@ function venezuela_blog_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'venezuela_blog_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => '',
+		'height'                 => '',
 		'flex-height'            => true,
 		'wp-head-callback'       => 'venezuela_blog_header_style',
 	) ) );
