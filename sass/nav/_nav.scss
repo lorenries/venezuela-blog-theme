@@ -4,7 +4,6 @@
 	color: white;
 	padding: 0.5rem 1rem;
 	display: inline-block;
-	font-size: 1.5rem;
 	font-family:
 		/* 1 */ -apple-system, BlinkMacSystemFont,
 		/* 2 */ "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -25,4 +24,18 @@
 
 .header-img {
 	filter: grayscale(80%) brightness(80%);
+}
+
+.mr-auto {
+	margin-right: auto; 
+}
+
+.ml-auto {
+	margin-left: auto;
+}
+
+.logo {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
