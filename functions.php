@@ -118,7 +118,7 @@ function venezuela_blog_scripts() {
 
 	wp_enqueue_script( 'venezuela-blog-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'modal', get_template_directory_uri() . '/js/modal.js', array(), true );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array(), true );
 
 	wp_enqueue_script( 'venezuela-blog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
