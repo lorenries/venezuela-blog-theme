@@ -22,3 +22,13 @@
 .h1-5 {
 	height: 1.5rem;
 }
+
+.search-form {
+	height:auto;
+	transition:height 0.2s ease-out;
+	background-color: #F7F6F4;
+}
+
+.search-field, .search-button {
+	background-color: darken(#F7F6F4, 10%);
+}

@@ -21,7 +21,7 @@ get_header(); ?>
 				
 				<div class="flex flex-column flex-row-l justify-center">
 
-					<div class="center self-center">
+					<div class="center self-center mw-100 w-70-l">
 
 						<?php /* Start the Loop */ ?>
 						<?php while ( have_posts() ) : the_post(); ?>
@@ -45,7 +45,7 @@ get_header(); ?>
 					<?php endif; ?>
 
 					</div>
-				<div style="flex-basis: 25%;" class="center"><?php get_sidebar(); ?></div>
+				<div class="center w-100 w-30-l"><?php get_sidebar(); ?></div>
 			</div>
 
 		</main><!-- #main -->
