@@ -111,6 +111,19 @@ function venezuela_blog_widgets_init() {
 add_action( 'widgets_init', 'venezuela_blog_widgets_init' );
 
 /**
+ * Add style classes to next_posts_links
+ *
+ * @link https://css-tricks.com/snippets/wordpress/add-class-to-links-generated-by-next_posts_link-and-previous_posts_link/
+ */
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="wola-blue underline-hover link"';
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function venezuela_blog_scripts() {
