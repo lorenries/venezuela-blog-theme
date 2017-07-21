@@ -1,13 +1,20 @@
-.menu-item a {
-	text-decoration: none;
-	transition:color .15s ease-in;
-	color: white;
-	padding: 0.5rem 1rem;
+.menu-item {
+	padding: 0rem 1rem;
 	display: inline-block;
 	font-family:
 		/* 1 */ -apple-system, BlinkMacSystemFont,
 		/* 2 */ "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
 		/* 3 */ "Helvetica Neue", sans-serif;
+}
+
+.menu-item a {
+	text-decoration: none;
+	transition:color .15s ease-in;
+	color: white;
+}
+
+.menu-item:first-child {
+	padding: 0rem 1rem 0rem 0rem;
 }
 
 .mw8-5 {
@@ -32,6 +39,6 @@
 	background-color: darken(#F7F6F4, 10%);
 }
 
-.vh-30 {
-	height: 30vh;
+.vh-25 {
+	height: 25vh;
 }
