@@ -9,7 +9,7 @@
 
 ?>
 
-<?php if(is_home() && is_front_page()) : ?>
+<?php if( ( is_home() && is_front_page() ) || ( is_archive() ) ) : ?>
 
 	<?php get_template_part( 'template-parts/content-preview' ); ?>
 
