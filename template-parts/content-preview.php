@@ -10,13 +10,18 @@
 
 				$coauthors = get_coauthors();
 
+				if ($coauthors[0]->display_name == 'wordpress') {
 
-				
-				if(count($coauthors) < 2) {
+					?>
+					
+					<div><? echo get_the_date('M. d')?></div>
+
+					<?php
+
+				} elseif(count($coauthors) < 2) {
 					$archive_link = get_author_posts_url( $coauthors[0]->ID, $author->user_email );
 					$link_title = 'Posts by ' . $coauthors[0]->display_name;
 					?>
-					<script type="text/javascript">console.log("<?php echo get_author_posts_url( $coauthors[0] ) ?>")</script>
 					<div class="flex">
 						<div>
 							<a href="<?php echo esc_url( $archive_link ); ?>" class="author-link" title="<?php echo esc_attr( $link_title ); ?>"><?php echo coauthors_get_avatar( $coauthors[0], 50 ); ?></a>
