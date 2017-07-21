@@ -14,11 +14,11 @@
 	border-radius:100%;
 }
 
-.author {
+a.author {
 	color: $color__wola-blue;
 	text-decoration: none;
 }
 
-.author:hover {
+a.author:hover {
 	text-decoration: underline;
 }

@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" class="mw7 ba b1 b--black-20 br2 ph3 ma3 bg-white card-shadow">
+<article id="post-<?php the_ID(); ?>" class="mw7 ba b1 b--black-20 br2 ph3 ma1 ma3-ns bg-white card-shadow">
 	
 	<header class="entry-header">
 		<?php
@@ -9,16 +9,20 @@
 			<?php if ( function_exists( 'get_coauthors' ) ) {
 
 				$coauthors = get_coauthors();
+
+
+				
 				if(count($coauthors) < 2) {
-					$archive_link = get_author_posts_url( $coauthors[0]->ID, $author->user_nicename );
+					$archive_link = get_author_posts_url( $coauthors[0]->ID, $author->user_email );
 					$link_title = 'Posts by ' . $coauthors[0]->display_name;
 					?>
+					<script type="text/javascript">console.log("<?php echo get_author_posts_url( $coauthors[0] ) ?>")</script>
 					<div class="flex">
 						<div>
-							<a href="<?php esc_url( $archive_link ); ?>" class="author-link" title="<?php echo esc_attr( $link_title ); ?>"><?php echo coauthors_get_avatar( $coauthors[0], 50 ); ?></a>
+							<a href="<?php echo esc_url( $archive_link ); ?>" class="author-link" title="<?php echo esc_attr( $link_title ); ?>"><?php echo coauthors_get_avatar( $coauthors[0], 50 ); ?></a>
 						</div>
 						<div class="flex flex-column justify-center pl2">
-							<div><a href="<?php esc_url( $archive_link ); ?>" class="wola-blue link underline-hover"><?php echo $coauthors[0]->display_name ?></a></div>
+							<?php echo coauthors_posts_links_single( $coauthors[0] )?>
 							<div><? echo get_the_date('M. d')?></div>
 						</div>
 					</div>
