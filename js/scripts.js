@@ -1,4 +1,5 @@
 (function() {
+
     document.addEventListener("DOMContentLoaded", function(event) {
         const aboutLink = document.querySelector("a[href='#about']"),
             close = document.querySelector(".closebtn"),
@@ -88,6 +89,9 @@
             collapseSection(searchForm)
           }
         });
+
+        var nodes = document.querySelectorAll('.fit-text');
+        fitterHappierText(nodes);
 
     });
 
