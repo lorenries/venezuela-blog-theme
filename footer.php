@@ -13,10 +13,11 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer bg-light-gray" role="contentinfo">
-		<div class="flex justify-between mw8 center pv5">
-			<div>
-				<h3 class="bb bw2 b--wola-blue">Follow WOLA</h3>
+	<footer id="colophon" class="site-footer bg-light-gray pv4" role="contentinfo">
+		<p class="mw8 ph2 ph3-ns center f5 lh-copy ma0">Venezuelan Politics and Human Rights, a blog hosted by the Washington Office on Latin America (WOLA), is a unique resource for journalists, policymakers, scholars, activists and others interested in understanding Venezuelan politics and human rights.</p>
+		<div class="mw8 ph2 ph3-ns center">
+			<div class="pt3">
+				<h3 class="bb bw2 b--wola-blue dib">Follow WOLA</h3>
 				<ul class="link white flex items-center list ma0 pa0">
 					<li class="flex items-center">
 						<a class="link hover-twitter wola-gray dib h1-5 w1-5 mr3 self-center" href="https://twitter.com/WOLA_org" title="Follow WOLA on Twitter" rel="noopener noreferrer" target="_blank">
@@ -38,24 +39,16 @@
 				</ul>
 			</div>
 
-			<div>
+			<div class="pt3">
 
-				<h3 class="bb bw2 b--wola-blue">Contact</h3>
-				<div class="">
-					<p>Washington Office on Latin America<br>1666 Connecticut Ave NW, Suite 400<br>Washington, DC 20009</p><p>Tel: (202)797-2171</p>
-				</div>
-
-			</div>
-
-			<div>
-
-				<h3 class="bb bw2 b--wola-blue">Menu</h3>
-
-				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'menu_class' => 'link f4 fw3 wola-gray pl2 pv0 ma0 list flex flex-column', 'container_class' => 'list',  ) ); ?>
+				<h3 class="bb bw2 b--wola-blue dib">Contact</h3>
+				<p class="measure ma0">For comments related to this blog, email us at venezuelablog@wola.org. For press inquiries only, please email us at press@wola.org or call (202) 797-2171.</p>
 
 			</div>
 
 		</div>
+
+		<div class="mw7 ph1 ph3-ns center pt4"><p class="pt4 f6 tc bt b--wola-light-gray ma0">&copy; Washington Office on Latin America, 1666 Connecticut Ave NW, Suite 400, Washington, DC 20009</p></div>
 
 
 
