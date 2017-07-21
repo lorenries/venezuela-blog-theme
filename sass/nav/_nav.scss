@@ -4,7 +4,6 @@
 	color: white;
 	padding: 0.5rem 1rem;
 	display: inline-block;
-	font-size: 1.5rem;
 	font-family:
 		/* 1 */ -apple-system, BlinkMacSystemFont,
 		/* 2 */ "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -31,4 +30,8 @@
 
 .search-field, .search-button {
 	background-color: darken(#F7F6F4, 10%);
+}
+
+.vh-30 {
+	height: 30vh;
 }
