@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main mw8-5 center" role="main">
+		<main id="main" class="site-main mw8 center" role="main">
 
 			<?php if ( have_posts() ) : ?>
 				
