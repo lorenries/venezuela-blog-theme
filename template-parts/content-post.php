@@ -23,7 +23,7 @@
 	<?php endif; ?>
 
 	<div class="flex flex-column flex-row-l<?php if ( has_post_thumbnail() ) : ?> pt3<?php endif; ?>">
-		<div class="entry-content measure lh-copy f4 w-100 w-70-l center">
+		<div class="entry-content measure lh-copy f4 w-100 w-70-l center-nl">
 			
 			<?php if ( function_exists( 'get_coauthors' ) ) {
 
