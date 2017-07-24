@@ -14,7 +14,7 @@
 
 					?>
 					
-					<div><? echo get_the_date('M. d')?></div>
+					<div><? echo get_the_date('M. j')?></div>
 
 					<?php
 
@@ -28,7 +28,7 @@
 						</div>
 						<div class="flex flex-column justify-center pl2">
 							<?php echo coauthors_posts_links_single( $coauthors[0] )?>
-							<div><? echo get_the_date('M. d')?></div>
+							<div><? echo get_the_date('M. j')?></div>
 						</div>
 					</div>
 					<?php	
@@ -36,7 +36,7 @@
 		      // More than 2 authors
 					printf( __( '<div class="">By %2$s, %1$s</div>', 'venezuela_blog' ),
 						sprintf( '<span class="entry-date">%1$s</span></a>',
-							get_the_date('M. d')
+							get_the_date('M. j')
 						),
 						coauthors_posts_links( ", ", " and ", null, null, false )
 					);
