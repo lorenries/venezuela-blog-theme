@@ -25,24 +25,24 @@
 
 		<header id="masthead" class="site-header w-100 pb3" role="banner">
 
-			<div class="w-100 h-100 bg-wola-gray">
+			<div class="w-100 bg-wola-gray">
 
-				<div class="mw8 h-100 center pv3 ph2 ph0-l">
+				<div class="mw8 center pv3 ph2 pv3-ns ph0-l">
 
 					<!-- .site-branding -->
 
 					<div class="flex flex-column flex-row-ns items-center justify-between">
 						
-						<div class="pv3 pv0-ns" style="flex-shrink: 10">
+						<div class="pv2 pv0-ns ph2 w-20-l">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="home">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/wola-logo-white.svg" alt="WOLA Logo" class="ph2 h3 h4-ns w-auto" style="max-height: 4.5rem;">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/wola-logo-white.svg" alt="WOLA Logo" class="h3 h4-ns w-auto" style="max-height: 4rem;">
 							</a>
 						</div>
 						
-						<div class="mv2 br b--white dn db-ns pl0 pl4-m pl5-l self-stretch"></div>
+						<div class="mv1 br b--white dn db-ns pl0 pl3-ns self-stretch"></div>
 						
-						<div class="flex items-start justify-between pv2 pb3" style="flex-basis: 75%">
-							<svg xmlns="http://www.w3.org/2000/svg" class="w-100 h-auto ph5-l ph3-m ph0 pv3 pv0-ns" viewBox="0 0 400 70">
+						<div class="flex items-start justify-between pv1 w-70-l">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-100 h-auto pl4-l pr5-l ph3-m ph0 pb1" viewBox="0 0 400 70">
 								<g id="Page-1" fill="none" fill-rule="evenodd">
 									<g id="logo" fill="#FFF">
 										<g id="Group">
@@ -111,7 +111,7 @@
 			<!-- header image -->
 
 			<?php if ( get_header_image() && is_front_page() ) : ?>
-				<!-- <div class="header-imagew-100 vh-25 cover pa0 ma0" style="background-image: url('<?php header_image(); ?>');"> -->
+				<div class="header-imagew-100 vh-25 cover pa0 ma0" style="background-image: url('<?php header_image(); ?>');">
 					<!-- <img src="<?php header_image(); ?>" class="w-100 h-25"></img> -->
 				</div>
 			<?php endif; ?>
@@ -147,4 +147,4 @@
 
 		</aside>
 
-		<div id="content" class="site-content pa2 bg-fafafa">
+		<div id="content" class="site-content bg-fafafa">
