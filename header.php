@@ -27,7 +27,7 @@
 
 			<div class="w-100 bg-wola-gray">
 
-				<div class="mw8 center pv3 ph2 pv3-ns ph0-l">
+				<div class="mw8 center pv3 ph2">
 
 					<!-- .site-branding -->
 
@@ -68,7 +68,7 @@
 
 					<nav id="site-navigation" class="pt3" role="navigation">
 
-						<div class="ma0 nowrap overflow-x-auto ws-normal-ns flex justify-start justify-between-ns items-center-ns">
+						<div class="ma0 nowrap overflow-x-auto overflow-y-hidden ws-normal-ns flex justify-start justify-between-ns items-center-ns">
 							<button class="menu-toggle dn" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'venezuela-blog' ); ?></button>
 							<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'menu_class' => 'link f4 fw3 white flex items-center pl2 pv0 ma0 list', 'container_class' => 'flex items-center list',  ) ); ?>
 							<ul class="link white flex items-center list ma0">
