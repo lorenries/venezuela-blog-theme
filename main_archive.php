@@ -17,7 +17,7 @@ get_header(); ?>
 <div class="pv3 pv6-ns">
 		<header class="page-header tc">
 
-			<h1 class="page-title mw8 center ph3"><?php the_title(); ?></h1>
+			<h1 class="page-title mw8 center ph3 lh-title"><?php the_title(); ?></h1>
 
 		</header><!-- .page-header -->
 
