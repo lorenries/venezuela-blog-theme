@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title mw8 center ph3">', '</h1>' );
+					the_archive_title( '<h1 class="page-title mw8 center ph3 lh-title">', '</h1>' );
 					the_archive_description( '<div class="archive-description mw8 center ph3">', '</div>' );
 				?>
 			</header><!-- .page-header -->
