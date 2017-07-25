@@ -113,11 +113,11 @@
 
 				<form action="//tumblr.us5.list-manage.com/subscribe/post?u=28bd3dd463a2079bdde8ce5f2&amp;id=b3ab7b9181" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="" target="_blank" novalidate>
 
-					<div class="mw6 center pv4 flex flex-center items-center">
+					<div class="mw6 w-80 center pv4 flex flex-column flex-row-ns justify-center items-center">
 
-						<input type="email" value="" name="EMAIL" class="w-75 system mid-gray pv3 ph2 fw2 f4 mr2" id="mce-EMAIL" placeholder="Your email" required></input>
+						<input type="email" value="" name="EMAIL" class="w-100 w-75-ns system mid-gray pv3 ph2 fw2 mb2 mb0-ns mr0 mr2-ns f5 f4-ns" id="mce-EMAIL" placeholder="Your email" required></input>
 
-						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="w-25 pa3 tc white bg-wola-gray system br2 bn pointer hover-bg-wola-blue bg-animate fw3 f4"></input>
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="w-100 w-25-ns pa3 ma0 white bg-wola-gray system br2 bn pointer hover-bg-wola-blue bg-animate fw3 f5 f4-ns"></input>
 
 					</div>
 				</form>
