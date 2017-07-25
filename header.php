@@ -108,6 +108,23 @@
 
 			<?php get_search_form(); ?>
 
+			<!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup" data-collapsed="true" class="w-100 bg-light-gray menu-signup-form overflow-hidden" style="height: 0px;">
+
+				<form action="//tumblr.us5.list-manage.com/subscribe/post?u=28bd3dd463a2079bdde8ce5f2&amp;id=b3ab7b9181" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="" target="_blank" novalidate>
+
+					<div class="mw6 center pv4 flex flex-center items-center">
+
+						<input type="email" value="" name="EMAIL" class="w-75 system mid-gray pv3 ph2 fw2 f4 mr2" id="mce-EMAIL" placeholder="Your email" required></input>
+
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="w-25 pa3 tc white bg-wola-gray system br2 bn pointer hover-bg-wola-blue bg-animate fw3 f4"></input>
+
+					</div>
+				</form>
+			</div>
+
+			<!--End mc_embed_signup-->
+
 			<!-- header image -->
 
 			<?php if ( get_header_image() && is_front_page() ) : ?>

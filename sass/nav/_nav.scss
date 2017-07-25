@@ -30,9 +30,14 @@
 }
 
 .search-form {
-	height:auto;
-	transition:height 0.2s ease-out;
+	height: auto;
+	transition: height 0.2s ease-out;
 	background-color: #F7F6F4;
+}
+
+.menu-signup-form {
+	height: auto;
+	transition: height 0.2s ease-out;
 }
 
 .search-field, .search-button {

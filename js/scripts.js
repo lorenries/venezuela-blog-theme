@@ -6,7 +6,9 @@
             body = document.querySelector("body"),
             overlay = document.querySelector( '.overlay' ),
             searchLink = document.querySelector("a[href='#search']"),
-            searchForm = document.querySelector("#search-form");
+            searchForm = document.querySelector("#search-form"),
+            signupMenu = document.querySelector("#mc_embed_signup"),
+            signupLink = document.querySelector("a[href='#subscribe']");
 
         aboutLink.addEventListener("click", toggleModal);
         close.addEventListener("click", toggleModal);
@@ -90,8 +92,17 @@
           }
         });
 
-        var nodes = document.querySelectorAll('.fit-text');
-        fitterHappierText(nodes);
+        signupLink.addEventListener('click', function(e) {
+          
+          var isCollapsed = signupMenu.getAttribute('data-collapsed') === 'true';
+            
+          if(isCollapsed) {
+            expandSection(signupMenu)
+            signupMenu.setAttribute('data-collapsed', 'false')
+          } else {
+            collapseSection(signupMenu)
+          }
+        });
 
     });
 
