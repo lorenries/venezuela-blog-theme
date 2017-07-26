@@ -194,7 +194,7 @@ function migration_redirect(){
 
         // Get URI
         $uri = $_SERVER['REQUEST_URI'];
-        
+
         // $uri = substr($uri, 1,strlen($uri));
 
         // if(substr($uri, -1) == '/'){
@@ -212,7 +212,7 @@ function migration_redirect(){
 
         if(!empty($post[0])){
 
-            wp_redirect(get_permalink($post[0]->ID));
+            wp_redirect(get_permalink($post[0]->ID), 301);
 
         }
     }
