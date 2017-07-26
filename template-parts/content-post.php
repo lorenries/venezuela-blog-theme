@@ -17,8 +17,9 @@
 
 
 	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="center">
+		<div class="center relative">
 			<img src="<?php the_post_thumbnail_url(); ?>" alt="" class="center db"></img>
+			<p class="caption f6 absolute bottom-0 right-0 ma0 pa3 white i"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></p>
 		</div><!-- .entry-meta -->
 	<?php endif; ?>
 
