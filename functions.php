@@ -219,3 +219,56 @@ function migration_redirect(){
 }
 
 add_action('template_redirect','migration_redirect');
+
+/**
+ * Extend Recent Posts Widget 
+ *
+ * Adds different formatting to the default WordPress Recent Posts Widget
+ */
+
+Class VZ_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
+
+	function widget($args, $instance) {
+		
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts') : $instance['title'], $instance, $this->id_base);
+				
+		if( empty( $instance['number'] ) || ! $number = absint( $instance['number'] ) )
+			$number = 6;
+					
+		$r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' => $number, 'no_found_rows' => true, 'post_status' => 'publish', 'ignore_sticky_posts' => true, 'post__not_in' => array( $before_widget ) ) ) );
+
+		if( $r->have_posts() ) :
+			
+			echo $before_widget;
+			?><div class="">
+				<h3><?php if( $title ) echo $before_title . $title . $after_title; ?></h3>
+				<ul class="list flex flex-column flex-row-ns flex-wrap items-stretch justify-start ma0 pa0">
+					<?php while( $r->have_posts() ) : $r->the_post(); ?>				
+					<div class="w-100 w-50-ns w-third-l pa2">
+						<li class="pa3 bg-light-gray">
+							<a class="link wola-gray hover-wola-blue b" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?>
+							</a>
+							<div class="flex justify-start pt2">
+								<p class="f6 mid-gray system ma0"><time><?php echo get_the_date('F j, Y')?></time></p>
+							</div>
+						</li>
+
+					</div>
+					<?php endwhile; ?>
+				</ul>
+			</div>
+			<?php
+			echo $after_widget;
+		
+		wp_reset_postdata();
+		
+		endif;
+	}
+}
+
+function my_recent_widget_registration() {
+  unregister_widget('WP_Widget_Recent_Posts');
+  register_widget('VZ_Recent_Posts_Widget');
+}
+
+add_action('widgets_init', 'my_recent_widget_registration');

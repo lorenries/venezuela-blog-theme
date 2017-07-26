@@ -1,9 +1,16 @@
 <article id="post-<?php the_ID(); ?>" class="center mw8 ph3">
 	<header class="entry-header">
+		
+
+		<div class="flex justify-between">
+			<p class="f5 mid-gray system ma0"><time><?php echo get_the_date('F j, Y')?></time></p>
+			<p class="f5 mid-gray system ma0"><?php echo get_reading_time(); ?></p>
+		</div>
+
 		<?php
 
 		if ( is_single() ) :
-			the_title( '<h1 class="entry-title f3 f2-ns f1-l lh-title bold measure center">', '</h1>' );
+			the_title( '<h1 class="entry-title f3 f2-ns f1-l lh-title mv3 bold measure center">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title f3 f2-ns f1-l bold center"><a class="link wola-gray" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
@@ -32,11 +39,7 @@
 
 				if ($coauthors[0]->display_name == 'wordpress') {
 
-					?>
-
-					<div><? echo get_the_date('F j, Y')?></div>
-
-					<?php
+					return;
 
 				} elseif(count($coauthors) < 2) {
 					$archive_link = get_author_posts_url( $coauthors[0]->ID, $author->user_email );
@@ -79,17 +82,16 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'venezuela-blog' ),
-				'after'  => '</div>',
-			) );
+			
 			?>
 		</div><!-- .entry-content -->
 		<div class="center w-100 w-30-l pb4 pb0-l">
 			<?php get_sidebar(); ?>
 		</div>
+
 	</div>
 
-	<footer class="entry-footer">
+	<footer class="entry-footer ph3 pb5">
+		<?php the_widget( 'VZ_Recent_Posts_Widget' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
