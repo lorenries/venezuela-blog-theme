@@ -181,3 +181,41 @@ function get_reading_time() {
 		return $m.' min read';
 	}
 }
+
+/**
+ * Add Tumblr redirect support
+ */
+function migration_redirect(){
+
+    global $post;
+    global $wp_query;
+
+    if(is_404()){
+
+        // Get URI
+        $uri = $_SERVER['REQUEST_URI'];
+        
+        // $uri = substr($uri, 1,strlen($uri));
+
+        // if(substr($uri, -1) == '/'){
+        //     $uri = substr($uri,0, strlen($uri)-1);
+        // }
+
+        // Get Post where custom_field = tumblr_venezuelablog_permalink
+        $args = array();
+        $args['posts_per_page'] = 1;
+        $args['post_status']    = 'publish';
+        $args['meta_key']       = 'tumblr_venezuelablog_permalink';
+        $args['meta_value']     = 'http://venezuelablog.tumblr.com' . $uri;
+
+        $post = get_posts($args);
+
+        if(!empty($post[0])){
+
+            wp_redirect(get_permalink($post[0]->ID));
+
+        }
+    }
+}
+
+add_action('template_redirect','migration_redirect');
