@@ -86,13 +86,13 @@
 		<a href="<?php echo esc_url( get_permalink() ); ?>" class="link underline-hover wola-blue">Read More…</a>
 	</div>
 	<div>
-		<a title="Share this post on Twitter" href="<?php $posturl = urlencode( get_permalink() ); $text = urlencode( get_the_title() ); $url = 'https://twitter.com/intent/tweet?url='.$posturl.'&text='.$text; echo esc_url($url); ?>" class="link" rel="external noopener noreferrer" target="_blank">
+		<a title="Share this post on Twitter" href="<?php $posturl = urlencode( get_permalink() ); $text = urlencode( get_the_title() ); $url = 'https://twitter.com/intent/tweet?url='.$posturl.'&text='.$text; echo esc_url($url); ?>" class="link no-underline" rel="external noopener noreferrer" target="_blank">
 
 			<div class="h-auto dib twitter grow-large" style="width:1.5rem;"><?php get_template_part( 'assets/icons/twitter.svg' ); ?></div>
 			
 		</a>
 		
-		<a title="Share this post on Facebook" href="<?php $posturl = urlencode( get_permalink() ); $text = urlencode( get_the_title() ); $url = 'https://www.facebook.com/sharer/sharer.php?u='.$posturl.'&text='.$text; echo esc_url($url); ?>" class="link" rel="external noopener noreferrer" target="_blank">
+		<a title="Share this post on Facebook" href="<?php $posturl = urlencode( get_permalink() ); $text = urlencode( get_the_title() ); $url = 'https://www.facebook.com/sharer/sharer.php?u='.$posturl.'&text='.$text; echo esc_url($url); ?>" class="link no-underline" rel="external noopener noreferrer" target="_blank">
 			<div class="h-auto dib facebook grow-large" style="width:1.5rem;"><?php get_template_part( 'assets/icons/facebook.svg' ); ?></div>
 		</a>	
 	</div>

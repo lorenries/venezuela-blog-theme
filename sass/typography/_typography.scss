@@ -41,6 +41,10 @@ a:hover, a:focus {
 	text-decoration: underline;
 }
 
+a.no-underline:hover, a.no-underline:focus {
+	text-decoration: none;
+}
+
 body,
 button,
 input,
