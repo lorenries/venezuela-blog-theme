@@ -241,10 +241,10 @@ Class VZ_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 			
 			echo $before_widget;
 			?><div class="">
-				<h3><?php if( $title ) echo $before_title . $title . $after_title; ?></h3>
+				<h3 class="ttu i bold"><?php if( $title ) echo $before_title . $title . $after_title; ?></h3>
 				<ul class="list flex flex-column flex-row-ns flex-wrap items-stretch justify-start ma0 pa0">
 					<?php while( $r->have_posts() ) : $r->the_post(); ?>				
-					<div class="w-100 w-50-ns w-third-l pa2">
+					<div class="w-100 w-50-ns w-third-l pr3 pb3">
 						<li class="pa3 bg-light-gray">
 							<a class="link wola-gray hover-wola-blue b" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?>
 							</a>
