@@ -21,7 +21,9 @@ get_header(); ?>
 
 			<div class="flex flex-column flex-row-l justify-center">
 
-				<div class="center self-center mw-100 w-70-l">
+				<div class="center self-center mw-100 w-70-l pr0 pr3">
+
+					<h3 class="extrabold ttu i flex justify-start hline ph3">The Latest</h3>
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -48,7 +50,18 @@ get_header(); ?>
 						<?php endif; ?>
 
 					</div>
-					<div class="center w-100 w-30-l pb4 pb0-l"><?php get_sidebar(); ?></div>
+
+					<div class="center w-100 w-30-l ph2 pb4 pb2-l">
+						
+						<div class="sticky">
+
+							<?php get_template_part( 'template-parts/contributors'); ?>
+							
+							<?php get_sidebar(); ?>
+								
+						</div>
+							
+					</div>
 				</div>
 
 			</main><!-- #main -->

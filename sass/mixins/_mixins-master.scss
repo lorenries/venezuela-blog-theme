@@ -10,3 +10,23 @@
 		margin-right: auto;
 	}
 }
+
+.author-picture img {
+	width: 100%;
+	height: auto;
+}
+
+.hline:after {
+	background-color: #00b5ef;
+	content: '\a0';
+	flex-grow: 1;
+	height: 4px;
+	position: relative;
+	top: 0.63em;
+  	margin-left:10px;
+}
+
+.sticky {
+	position: sticky; 
+	top: 20px;
+}
