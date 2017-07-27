@@ -48,7 +48,10 @@
 
 		</div>
 
-		<div class="mw7 ph1 ph3-ns center pt4"><p class="pt4 f6 tc bt b--wola-light-gray ma0">&copy; Washington Office on Latin America, 1666 Connecticut Ave NW, Suite 400, Washington, DC 20009</p></div>
+		<div class="mw7 ph1 ph3-ns center pt4">
+			<p class="pt4 f6 tc bt b--wola-light-gray ma0">This blog is still under construction. Please report any bugs or errors to venezuelablog.wola.org.</p>
+			<p class="pt3 f6 tc ma0">&copy; Washington Office on Latin America, 1666 Connecticut Ave NW, Suite 400, Washington, DC 20009</p>
+		</div>
 
 
 
