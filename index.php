@@ -17,6 +17,11 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main mw8 center" role="main">
 
+		<?php if ( venezuela_blog_has_featured_posts( 1 ) ) : ?>
+			<h3 class="extrabold ttu i flex justify-start hline-center ph0 ph1-ns ma0 pv2">Featured</h3>
+		    <?php get_template_part( 'template-parts/featured' ); ?>
+		<?php endif; ?>
+
 		<?php if ( have_posts() ) : ?>
 
 			<div class="flex flex-column flex-row-l justify-center">

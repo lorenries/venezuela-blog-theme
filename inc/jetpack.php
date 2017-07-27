@@ -23,6 +23,13 @@ function venezuela_blog_jetpack_setup() {
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
+
+	// Add support for 1 homepage featured post. NOTE: Jetpack plugin must be activated
+	add_theme_support( 'featured-content', array(
+	    'filter'     => 'venezuela_blog_get_featured_posts',
+	    'max_posts'  => 1,
+	) );
+	
 }
 add_action( 'after_setup_theme', 'venezuela_blog_jetpack_setup' );
 

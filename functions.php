@@ -131,8 +131,6 @@ function venezuela_blog_scripts() {
 
 	wp_enqueue_script( 'venezuela-blog-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'fitter-happier-text', get_template_directory_uri() . '/js/fitter-happier-text.js', array(), true );
-
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array(), true );
 
 	wp_enqueue_script( 'venezuela-blog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -167,6 +165,41 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+* Get our Featured Content posts
+*/
+
+// function venezuela_blog_get_featured_posts() {
+//   apply_filters( 'venezuela_blog_featured_posts', array() );
+// }
+
+function venezuela_blog_get_featured_posts() {
+    return apply_filters( 'venezuela_blog_get_featured_posts', array() );
+}
+
+/**
+* Check for featured posts
+*/
+
+function venezuela_blog_has_featured_posts( $minimum = 1 ) {
+    if ( is_paged() ) {
+        return false;
+    }
+
+    $minimum = absint( $minimum );
+    $featured_posts = apply_filters( 'venezuela_blog_get_featured_posts', array() );
+
+    if ( ! is_array( $featured_posts ) ) {
+        return false;
+    }
+
+    if ( $minimum > count( $featured_posts ) ) {
+        return false;
+    } else {
+   	 return true;
+	}
+}
 
 /**
  * Estimate reading time
@@ -212,7 +245,7 @@ function migration_redirect(){
 
         if(!empty($post[0])){
 
-            wp_redirect(get_permalink($post[0]->ID), 301);
+            wp_redirect(get_permalink($post[0]->ID));
 
         }
     }
@@ -288,3 +321,5 @@ function my_recent_widget_registration() {
 }
 
 add_action('widgets_init', 'my_recent_widget_registration');
+
+add_filter( 'jetpack_development_mode', '__return_true' );
