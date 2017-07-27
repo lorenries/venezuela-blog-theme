@@ -221,6 +221,22 @@ function migration_redirect(){
 add_action('template_redirect','migration_redirect');
 
 /**
+ * Add a Title field to Co-Authors Plus Guest Author
+ */
+
+add_filter( 'coauthors_guest_author_fields', 'capx_filter_guest_author_fields', 10, 2 );
+function capx_filter_guest_author_fields( $fields_to_return, $groups ) {
+	if ( in_array( 'all', $groups ) || in_array( 'contact-info', $groups ) ) {
+		$fields_to_return[] = array(
+					'key'      => 'title',
+					'label'    => 'Title',
+					'group'    => 'contact-info',
+				);
+	} 
+	return $fields_to_return;
+}
+
+/**
  * Extend Recent Posts Widget 
  *
  * Adds different formatting to the default WordPress Recent Posts Widget
