@@ -23,10 +23,25 @@
 	height: 4px;
 	position: relative;
 	top: 0.63em;
-  	margin-left:10px;
+  	margin-left:13px;
 }
 
 .sticky {
 	position: sticky; 
 	top: 20px;
+}
+
+.hline-center:before, .hline-center:after {
+	background-color: #00b5ef;
+	content: '\a0';
+	flex-grow: 1;
+	height: 4px;
+	position: relative;
+	top: 0.63em;
+  	margin-left:13px;
+  	margin-right:13px;
+}
+
+.h20rem {
+	height: 20rem;
 }
