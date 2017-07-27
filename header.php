@@ -19,6 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<?php include_once("analyticstracking.php") ?>
 	<div id="page" class="site bg-fafafa">
 		
 		<a class="skip-link screen-reader-text dn" href="#content"><?php esc_html_e( 'Skip to content', 'venezuela-blog' ); ?></a>
@@ -140,23 +141,21 @@
 		<aside id="aboutModal" class="overlay center pa3 pa4-ns">
 			<a href="#" class="closebtn grow-large">&times;</a>
 			
-			<div class="center pt5 pt6-ns flex justify-center">
+			<div class="center pt5 pt6-ns pb5 flex justify-center">
 				<div>
-					<h1 class="wola-gray f2 ttu">About the Blog</h1>
+					<h1 class="wola-gray f2 ttu extrabold i hline flex justify-start">About the Blog</h1>
 					<p class="measure wola-gray f3 tl">
 						Venezuelan Politics and Human Rights, a blog hosted by the Washington Office on Latin America (WOLA), is a unique resource for journalists, policymakers, scholars, activists and others interested in understanding Venezuelan politics and human rights. 
 					</p>
 					<p class="measure wola-gray f3 tl">
-						The contributors call it as they see it, providing insights on Venezuela’s politics that go beyond the polarized pro-Chávez/anti-Chávez debate. The views expressed in the posts are those of the authors and do not necessarily reflect WOLA’s institutional positions. 
+						The contributors call it as they see it, providing insights on Venezuela&rsquo;s politics that go beyond the polarized pro-Chavismo/anti-Chavismo debate. The views expressed in the posts are those of the authors and do not necessarily reflect WOLA&rsquo;s institutional positions. 
 					</p>
-					<h2 class="wola-gray f3 ttu">The Bloggers</h2>
+					<h2 class="wola-gray f3 ttu extrabold i hline flex justify-start">The Bloggers</h2>
 					<p class="measure wola-gray f3">David Smilde, curator of the blog, is a WOLA Senior Fellow and the Charles A. and Leo M. Favrot Professor of Human Relations at Tulane University. He has lived in or worked on Venezuela since 1992. He is co-editor of Venezuela's Bolivarian Democracy: Participation, Politics and Culture under Chávez (Duke 2011).</p>
-					<p class="measure wola-gray f3">Hugo Pérez Hernáiz is Associate Professor of Sociology at the Universidad Central de Venezuela.</p>
-					<p class="measure wola-gray f3">Rebecca Hanson is a graduate student in sociology at the University of Georgia doing doctoral research on police reform and citizen participation in Venezuela.</p>
-					<p class="measure wola-gray f3">Timothy Gill is a Post-Doctoral Fellow at the Center for Inter-American Policy and Research at Tulane University. His research focuses on US foreign policy towards Venezuela and foreign funding for non-governmental organizations.</p>
-					<h2 class="wola-gray f3 ttu">About WOLA</h2>
+					<p class="measure wola-gray f3">Geoff Ramsey is WOLA’s Associate for Venezuela. He is an avid observer of the situation in Venezuela—having helped coordinate WOLA’s response to and coverage of the December 2015 legislative elections from Caracas—as well as a regular contributor to WOLA’s Venezuelan Politics and Human Rights blog. </p>
+					<h2 class="wola-gray f3 ttu extrabold i hline flex justify-start">About WOLA</h2>
 					<p class="measure wola-gray f3">WOLA is a leading research and advocacy organization advancing human rights in the Americas.</p>
-					<h2 class="wola-gray f3 ttu">Contact</h2>
+					<h2 class="wola-gray f3 ttu extrabold i hline flex justify-start">Contact</h2>
 					<p class="measure wola-gray f3">For comments related to this blog, email us at venezuelablog@wola.org. </p>
 					<p class="measure wola-gray f3">For press inquiries only, please email us at press@wola.org. </p>
 				</div>
