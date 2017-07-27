@@ -290,7 +290,7 @@ Class VZ_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 			
 			echo $before_widget;
 			?><div class="">
-				<h3 class="ttu i bold"><?php if( $title ) echo $before_title . $title . $after_title; ?></h3>
+				<h3 class="ttu i extrabold hline flex justify-start pr3"><?php if( $title ) echo $before_title . $title . $after_title; ?></h3>
 				<ul class="list flex flex-column flex-row-ns flex-wrap items-stretch justify-start ma0 pa0">
 					<?php while( $r->have_posts() ) : $r->the_post(); ?>				
 					<div class="w-100 w-50-ns w-third-l pr3 pb3">
@@ -321,5 +321,3 @@ function my_recent_widget_registration() {
 }
 
 add_action('widgets_init', 'my_recent_widget_registration');
-
-add_filter( 'jetpack_development_mode', '__return_true' );
