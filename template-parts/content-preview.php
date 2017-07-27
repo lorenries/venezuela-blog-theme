@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" class="mw7 ba b1 b--black-20 br2 ph3 ma1 ma3-ns bg-white card-shadow">
+<article id="post-<?php the_ID(); ?>" class="mw7 ba b1 b--black-20 br2 ph3 ma2 ma3-ns bg-white card-shadow">
 	
 	<header class="entry-header">
 		<?php
