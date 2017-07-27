@@ -95,7 +95,7 @@
 										</svg>
 									</a>
 								</li>
-								<li class="flex items-center"><a href="https://wola.org" class="link white hover-wola-blue f4 fw3" rel="noopener noreferrer" target="_blank">WOLA.org</a></li>
+								<li class="flex items-center"><a href="https://www.wola.org" class="link white hover-wola-blue f4 fw3" rel="noopener noreferrer" target="_blank">WOLA.org</a></li>
 							</ul>
 						</div>
 					</nav>
