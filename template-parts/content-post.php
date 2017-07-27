@@ -86,7 +86,7 @@
 			?>
 		</div><!-- .entry-content -->
 		<div class="center w-100 w-30-l pb4 pb0-l">
-			<?php get_sidebar(); ?>
+			<div class="sticky"><?php get_sidebar(); ?></div>
 		</div>
 
 	</div>
