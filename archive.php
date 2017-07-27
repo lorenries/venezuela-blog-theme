@@ -17,14 +17,14 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title mw8 center ph3 lh-title">', '</h1>' );
+					the_archive_title( '<h1 class="page-title mw8 center ph3 lh-title tc">', '</h1>' );
 					the_archive_description( '<div class="archive-description mw8 center ph3">', '</div>' );
 				?>
 			</header><!-- .page-header -->
 
 			<div class="flex flex-column flex-row-l justify-center">
 
-			<div class="center self-center mw-100 w-70-l">
+			<div class="center self-center mw-100 w-70-l pr0 pr4-l">
 
 			<?php
 			/* Start the Loop */
@@ -40,7 +40,7 @@ get_header(); ?>
 			endwhile;
 
 			?>
-			<div class="flex justify-between ph1 pv3 pa3">
+			<div class="flex justify-between ph1 pt3 pb4">
 				<div class=""><?php next_posts_link('&larr; Older Posts') ?></div>
 				<div class=""><?php previous_posts_link('Newer Posts &rarr;') ?></div>
 			</div>

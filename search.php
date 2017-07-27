@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main mw8 center" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
@@ -32,7 +32,14 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			?>
+
+			<div class="flex justify-between ph1 pt3 pb4">
+				<div class=""><?php next_posts_link('&larr; Older Posts') ?></div>
+				<div class=""><?php previous_posts_link('Newer Posts &rarr;') ?></div>
+			</div>
+
+			<?php
 
 		else :
 
