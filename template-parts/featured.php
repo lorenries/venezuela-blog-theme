@@ -16,7 +16,7 @@
 				<?php if ( has_post_thumbnail() ) : ?>
 
 
-						<a href="<?php echo esc_url( get_permalink() ); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="" class="w-100 h20rem center object-fit-cover pb2"></img></a>
+						<a href="<?php echo esc_url( get_permalink() ); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="" class="w-100 h4 h5-ns center object-fit-cover pb2"></img></a>
 
 
 				<?php endif; ?>
