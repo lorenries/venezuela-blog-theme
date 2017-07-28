@@ -22,10 +22,13 @@
 
 					$coauthors = get_coauthors();
 
-					if ($coauthors[0]->display_name == 'wordpress') {
+					if ($coauthors[0]->display_name == 'wordpress' || $coauthors[0]->display_name == 'system') { 
 
-						return;
+						?>
 
+						<div class="mid-gray f5 pv3 bt bb b1 b--light-gray"><time><? echo get_the_date('F j, Y')?></time></div>
+
+						<? 
 					} elseif(count($coauthors) < 2) {
 						$archive_link = get_author_posts_url( $coauthors[0]->ID, $author->user_email );
 						$link_title = 'Posts by ' . $coauthors[0]->display_name;
@@ -50,8 +53,7 @@
 						);
 		      // treat author output normally
 					}
-				}
-				else {
+				} else {
 					$archive_link = get_author_posts_url( get_the_author_meta( 'ID' ) );
 					$link_title = 'Posts by ' . the_author();
 
@@ -78,28 +80,16 @@
 			<div class="entry-content measure lh-copy f4 w-100 w-70-l center-nl">		
 
 				<!-- THIS IS WHERE THE CONTENT GOES -->
-					
-					<?php
 
-					if ( get_the_ID() <= 72 || get_the_ID() > 650 ) {
+				<?php
 
-						the_content( sprintf(
-							/* translators: %s: Name of current post. */
-							wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'venezuela-blog' ), array( 'span' => array( 'class' => array() ) ) ),
-							the_title( '<span class="screen-reader-text">"', '"</span>', false )
-						) );
+				the_content( sprintf(
+					/* translators: %s: Name of current post. */
+					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'venezuela-blog' ), array( 'span' => array( 'class' => array() ) ) ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				) );
 
-						
-					} else {
-						// echo html_entity_decode( htmlentities( get_the_content() ) );
-
-						$mycontent = get_the_content();
-						echo $mycontent;
-
-					}
-
-
-					?>
+				?>
 
 				<!-- END OF THE CONTENT -->
 
