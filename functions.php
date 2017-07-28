@@ -239,13 +239,13 @@ function migration_redirect(){
         $args['posts_per_page'] = 1;
         $args['post_status']    = 'publish';
         $args['meta_key']       = 'tumblr_venezuelablog_permalink';
-        $args['meta_value']     = 'http://venezuelablog.tumblr.com' . $uri;
+        $args['meta_value']     = 'https://venezuelablog.tumblr.com' . $uri;
 
         $post = get_posts($args);
 
         if(!empty($post[0])){
 
-            wp_redirect(get_permalink($post[0]->ID));
+            wp_redirect(get_permalink($post[0]->ID), 301);
 
         }
     }
