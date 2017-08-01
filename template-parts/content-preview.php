@@ -72,7 +72,7 @@
 
 <?php endif; ?>
 
-<div>
+<div class="excerpt">
 	<?php if ( has_excerpt() ) : ?>
 		<p class="pa0 ma0"><?php echo  get_the_excerpt(); ?></p> 
 	<?php else: ?>
