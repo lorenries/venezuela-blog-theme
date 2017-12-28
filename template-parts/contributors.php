@@ -29,11 +29,11 @@
 
 		<div class="flex flex-column flex-row-ns justify-start items-center">
 			<div class="order-1 order-0-ns pt4 pt0-ns w-third">
-				<a href="author/geoff-ramsey/" target="_blank" rel="noopener noreferrer"><img class="mw4 br-100 w-100 h-auto" src="/wp-content/uploads/2017/07/GR-Thumb.jpg" alt="Geoff Ramsey"></a>
+				<a href="author/geoff-ramsey/" rel="noopener noreferrer"><img class="mw4 br-100 w-100 h-auto" src="/wp-content/uploads/2017/07/GR-Thumb.jpg" alt="Geoff Ramsey"></a>
 			</div>
 			<div class="pl0 pl4-ns order-0 order-1-ns w-two-thirds">
-				<h1 class="f5 ma0 pb1"><a class="wola-gray hover-wola-blue link" href="author/geoff-ramsey/" target="_blank" rel="noopener noreferrer">Geoff Ramsey</a></h1>
-				<p class="f6 ma0 fw2">WOLA Associate for Venezuela</p>
+				<h1 class="f5 ma0 pb1"><a class="wola-gray hover-wola-blue link" href="author/geoff-ramsey/" rel="noopener noreferrer">Geoff Ramsey</a></h1>
+				<p class="f6 ma0 fw2">WOLA Assistant Director for Venezuela</p>
 			</div>
 
 		</div>
