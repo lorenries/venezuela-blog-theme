@@ -58,11 +58,13 @@ get_header(); ?>
 
 					<div class="center w-100 w-30-l ph2 pb4 pb2-l">
 						
-						<div class="sticky">
+						<div class="">
 
 							<?php get_template_part( 'template-parts/contributors'); ?>
 							
 							<?php get_sidebar(); ?>
+
+							<?php get_template_part( 'template-parts/twitter-timeline'); ?>
 								
 						</div>
 							
