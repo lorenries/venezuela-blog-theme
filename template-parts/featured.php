@@ -90,7 +90,7 @@
 			<?php if ( has_excerpt() ) : ?>
 				<p class="pa0 ma0"><?php echo  get_the_excerpt(); ?></p> 
 			<?php else: ?>
-				<p class="pa0 ma0"><?php echo force_balance_tags( html_entity_decode( wp_trim_words( htmlentities( get_the_content() ), 30, $more = "…" ) ) );?></p>
+				<p class="pa0 ma0"><?php the_advanced_excerpt('length=40&length_type=words&word=sentence&no_custom=0&ellipsis=%26hellip;'); ?></p>
 
 			<?php endif; ?>
 		</div><!-- .entry-content -->
