@@ -321,3 +321,17 @@ function my_recent_widget_registration() {
 }
 
 add_action('widgets_init', 'my_recent_widget_registration');
+
+/**
+ * Remove prefix from archive.php titles 
+ *
+ * This gets rid of "Category:" on the Venezuela Weekly page
+ */
+
+function prefix_category_title( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    }
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'prefix_category_title' );
