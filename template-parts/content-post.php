@@ -30,7 +30,7 @@
 
 						<? 
 					} elseif(count($coauthors) < 2) {
-						$archive_link = get_author_posts_url( $coauthors[0]->ID, $author->user_email );
+						$archive_link = get_author_posts_url( get_the_author_meta( 'ID' ) );
 						$link_title = 'Posts by ' . $coauthors[0]->display_name;
 						?>
 						<div class="flex items-stretch pv3 mb4 bt bb b1 b--light-gray">
