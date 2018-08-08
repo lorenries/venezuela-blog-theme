@@ -30,12 +30,11 @@
 
 						<? 
 					} elseif(count($coauthors) < 2) {
-						$archive_link = get_author_posts_url( get_the_author_meta( 'ID' ) );
 						$link_title = 'Posts by ' . $coauthors[0]->display_name;
 						?>
 						<div class="flex items-stretch pv3 mb4 bt bb b1 b--light-gray">
 							<div class="self-center">
-								<a href="<?php echo esc_url( $archive_link ); ?>" class="author-link" title="<?php echo esc_attr( $link_title ); ?>"><?php echo coauthors_get_avatar( $coauthors[0], 75 ); ?></a>
+								<?php echo coauthors_get_avatar( $coauthors[0], 75 ); ?>
 							</div>
 							<div class="flex flex-column justify-center pl2 f5">
 								<?php echo coauthors_posts_links_single( $coauthors[0] )?>
